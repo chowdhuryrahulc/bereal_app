@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "161850204732",
+    "project_id": "bereal-9173b",
+    "storage_bucket": "bereal-9173b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161850204732:android:0dddaafcf2926f3f2e1939",
+        "android_client_info": {
+          "package_name": "com.example.bereal_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfUqzswCSerUI7xo4YIXZX98-UxbcRyZU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
