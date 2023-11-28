@@ -5,6 +5,7 @@ part 'scroll_behavior.g.dart';
 @riverpod
 class ScrollBehavior extends _$ScrollBehavior {
   @override
+  bool build() {
     return true;
   }
 
