@@ -61,6 +61,62 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         ));
   }
 
+  Widget posted(XFile photo, XFile selfie) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 130),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          SmallRealWidget(photo: File(photo.path), selfie: File(selfie.path)),
+          Flexible(
+              child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        "Your friends haven’t posted their BeReal yet. Add even more friends.",
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(height: 20),
+                      ElevatedButton(
+                          onPressed: () {
+                            context.push('/contact');
+                          },
+                          style: ref.watch(stylesProvider).button.primary,
+                          child: const Text("+ Add friends"))
+                    ],
+                  )))
+        ],
+      ),
+    );
+  }
+
+  Widget feed() {
+    final scrollEnabled = ref.watch(scrollBehaviorProvider);
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      child: ListView.separated(
+          physics: scrollEnabled ? const AlwaysScrollableScrollPhysics() : const NeverScrollableScrollPhysics(),
+          itemCount: 3,
+          controller: _scrollController,
+          itemBuilder: (context, index) {
+            if (index == 0) {
+              return const Padding(
+                padding: EdgeInsets.only(top: 90),
+                child: RealSocialWidget(),
+              );
+            } else {
+              return const RealSocialWidget();
+            }
+          },
+          separatorBuilder: (BuildContext context, int index) => const SizedBox(
+                height: 20,
+              )),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final scrollEnabled = ref.watch(scrollBehaviorProvider);
