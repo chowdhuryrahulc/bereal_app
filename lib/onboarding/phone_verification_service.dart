@@ -5,4 +5,7 @@ class PhoneVerificationService {
 
   final BasePhoneVerificationRepository phoneVerificationRepository;
 
+  Future<void> verifyPhoneNumber(String phoneNumber) async {
+    await phoneVerificationRepository.verifyNumber(phoneNumber);
+  }
 }

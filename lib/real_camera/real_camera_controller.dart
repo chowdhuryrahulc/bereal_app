@@ -29,6 +29,10 @@ class RealCameraController extends _$RealCameraController {
     final image = await _controller.takePicture();
     state = RealCameraState.captured(image: image);
 
+    final cameras = await availableCameras();
+    _controller = CameraController(
+        cameras.firstWhere((description) => description.lensDirection == CameraLensDirection.front),
+        ResolutionPreset.high);
     await _controller.initialize();
     _controller.setZoomLevel(await _controller.getMinZoomLevel());
     _controller.setFlashMode(FlashMode.off);
