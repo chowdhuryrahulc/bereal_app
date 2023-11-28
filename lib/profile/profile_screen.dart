@@ -53,18 +53,18 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                         child: ClipRRect(
                             borderRadius: BorderRadius.circular(100),
                             child:
-                                CachedNetworkImage(fit: BoxFit.cover, imageUrl: "https://i.pravatar.cc/200?img=38")))),
+                                CachedNetworkImage(fit: BoxFit.cover, imageUrl: "https://i.pravatar.cc/200?img=40")))),
               ),
               const SizedBox(height: 10),
-              Text("Alice", style: ref.watch(stylesProvider).text.title),
-              Text("alice007", style: ref.watch(stylesProvider).text.bodyBold),
+              Text("Rahul", style: ref.watch(stylesProvider).text.title),
+              Text("rahul007", style: ref.watch(stylesProvider).text.bodyBold),
               const SizedBox(height: 200),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text("🔗", style: TextStyle(fontSize: 15)),
                   const SizedBox(width: 5),
-                  Text("BeRe.al/alice007", style: ref.watch(stylesProvider).text.bodySmall),
+                  Text("BeRe.al/rahul007", style: ref.watch(stylesProvider).text.bodySmall),
                 ],
               )
             ],

@@ -126,7 +126,7 @@ class _ContactScreenState extends ConsumerState<ContactScreen> {
                             'Invite your friends on BeReal',
                             style: ref.watch(stylesProvider).text.bodySmallBold,
                           ),
-                          Text('bere.al/alice007',
+                          Text('bere.al/rahulchowdhury',
                               style: ref.watch(stylesProvider).text.bodySmall.copyWith(color: Colors.grey.shade500))
                         ],
                       ),
