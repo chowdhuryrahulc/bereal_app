@@ -79,10 +79,10 @@ class _RealSocialWidgetState extends ConsumerState<RealSocialWidget> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              "John Doe",
+                              "Rahul Chowdhury",
                               style: ref.watch(stylesProvider).text.bodySmallBold,
                             ),
-                            Text("Paris, France • 12:45:23", style: ref.watch(stylesProvider).text.bodySmall)
+                            Text("Delhi, India • 12:45:23", style: ref.watch(stylesProvider).text.bodySmall)
                           ],
                         ))
                   ],
@@ -103,7 +103,7 @@ class _RealSocialWidgetState extends ConsumerState<RealSocialWidget> {
                 });
               },
               child: const RealWidget(
-                  selfie: "https://i.pravatar.cc/1000?img=6", photo: "https://picsum.photos/seed/123/1080/1920"),
+                  selfie: "https://i.pravatar.cc/1000?img=5", photo: "https://picsum.photos/seed/123/1080/1920"),
             ),
             Visibility(
                 visible: !_reactOpen,
