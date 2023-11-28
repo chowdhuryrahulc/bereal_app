@@ -27,7 +27,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   int step = 0;
   Country country = CountryParser.parseCountryCode('FR');
 
-  List<String> titles = [
+  List<String> titles = [ 
     "Let’s get started, what's your name?",
     "Hi, #name, when's your birthday?",
     "Create your account using your phone number",
