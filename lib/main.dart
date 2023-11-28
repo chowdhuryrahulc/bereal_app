@@ -9,7 +9,7 @@ void main() {
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   runApp(const ProviderScope(child: MyApp()));
-} 
+}
 
 class MyApp extends ConsumerWidget {
   const MyApp({super.key});
