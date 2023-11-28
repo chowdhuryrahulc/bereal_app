@@ -14,9 +14,7 @@ final GoRouter router = GoRouter(
         path: '/',
         builder: (BuildContext context, GoRouterState state) => const HomeScreen(),
         redirect: (context, state) async {
-          const storage = FlutterSecureStorage();
           FlutterNativeSplash.remove();
-          final user = await storage.read(key: 'user');
           if (user == null) {
             return '/onboarding';
           }
@@ -33,18 +31,6 @@ final GoRouter router = GoRouter(
                   transitionsBuilder: (context, animation, secondaryAnimation, child) {
                     return Stack(
                       children: <Widget>[
-                        SlideTransition(
-                          position: Tween<Offset>(
-                            begin: const Offset(-1.0, 0.0),
-                            end: const Offset(0.0, 0.0),
-                          ).animate(
-                            CurvedAnimation(
-                              parent: animation,
-                              curve: Curves.linear,
-                            ),
-                          ),
-                          child: child,
-                        ),
                         SlideTransition(
                           position: Tween<Offset>(
                             begin: const Offset(0.0, 0.0),
