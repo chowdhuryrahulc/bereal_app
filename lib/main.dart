@@ -6,9 +6,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-//   await Firebase.initializeApp(
-//     options: DefaultFirebaseOptions.currentPlatform,
-// );
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   runApp(const ProviderScope(child: MyApp()));
